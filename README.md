@@ -103,7 +103,7 @@ deficiencies that remain in your code. Bugs found that aren't acknowledged in th
 
 ```
     Partner 1: **Replace this with your reflection 
-```
+``` 
 
 ```
     Partner 2: **Replace this with your reflection  
