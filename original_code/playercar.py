@@ -13,6 +13,7 @@ class PlayerCar:
         self.image = pygame.image.load("../image/car_image.png")
         self.image = pygame.transform.scale(self.image, (self.width, self.height))
 
+    #Car movements
     def move_left(self):
         self.x -= self.speed
 

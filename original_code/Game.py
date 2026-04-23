@@ -18,7 +18,7 @@ class Game:
         road_x = (self.width - road_width) // 2
         lane_width = road_width // 3
 
-        # place car in middle lane
+        # place car in middle lane at the bottom
         car_x = road_x + lane_width + (lane_width - 50) // 2
         car_y = self.height - 120
 
