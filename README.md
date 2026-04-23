@@ -11,7 +11,7 @@
 
 ---
 
-## Milestone 1: Setup, Planning, Design 
+## Milestone 1: Setup, Planning, Design  
 
 ❗️**Title**: `What is the title of your project? Be creative! Replace this block of text.`
 
