@@ -58,6 +58,7 @@ class Game:
                 (line2_x - lane_width // 2, y, lane_width, dash_height)
             )
 
+
     def update_obstacles(self):
         self.spawn_timer += 1
 
@@ -96,6 +97,23 @@ class Game:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     self.running = False
+
+            keys = pygame.key.get_pressed()
+
+            if keys[pygame.K_LEFT]:
+                self.player.move_left()
+
+            if keys[pygame.K_RIGHT]:
+                self.player.move_right()
+
+            if self.player.x < self.road_x:
+                self.player.x = self.road_x
+
+            right_edge = self.road_x + self.road_width - self.player.width
+
+            if self.player.x > right_edge:
+                self.player.x = right_edge
+
             self.update_obstacles()
             self.draw()
 

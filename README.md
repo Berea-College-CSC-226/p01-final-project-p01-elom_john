@@ -48,6 +48,9 @@ and describe how you integrated the ideas or code into your program. This includ
 helped you, AI tools you've used, and any other resources that are not solely your own contribution. Update this 
 section as you go. DO NOT forget about it!
 
+Sources: 
+1. https://chatgpt.com/share/69f0f499-f9e8-83ea-84d0-c80b0194eb02
+
 ---
 
 ## Milestone 2: Code Setup and Issue Queue
