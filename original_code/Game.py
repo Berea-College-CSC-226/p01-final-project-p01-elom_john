@@ -58,7 +58,20 @@ class Game:
                 (line2_x - lane_width // 2, y, lane_width, dash_height)
             )
 
+    def update_obstacles(self):
+        self.spawn_timer += 1
 
+        if self.spawn_timer > 50:
+            self.obstacles.append(Obstacle(self.road_x, self.road_width))
+            self.spawn_timer = 0
+
+        for obstacle in self.obstacles:
+            obstacle.move()
+
+        self.obstacles = [
+            obstacle for obstacle in self.obstacles
+            if not obstacle.is_off_screen(self.height)
+        ]
 
     def draw(self):
         # background (grass color)
@@ -66,6 +79,11 @@ class Game:
 
         # draw road
         self.draw_road()
+
+        #Draw the obstacles
+        for obstacle in self.obstacles:
+            obstacle.draw(self.screen)
+
         #Draw car
         self.player.draw(self.screen)
 
@@ -78,7 +96,7 @@ class Game:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     self.running = False
-
+            self.update_obstacles()
             self.draw()
 
         pygame.quit()

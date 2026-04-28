@@ -15,7 +15,7 @@ class Obstacle:
 
         self.speed = 3
 
-        self.image = pygame.image.load("../image/obstacle1.png")
+        self.image = pygame.image.load("../image/obstacle001.png")
         self.image = pygame.transform.scale(self.image, (self.width, self.height))
 
 
