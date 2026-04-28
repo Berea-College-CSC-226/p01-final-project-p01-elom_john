@@ -1,5 +1,6 @@
 import pygame
 from playercar import PlayerCar
+from obstacles import Obstacle
 
 
 class Game:
@@ -14,22 +15,25 @@ class Game:
         self.clock = pygame.time.Clock()
         self.running = True
 
-        road_width = 300
-        road_x = (self.width - road_width) // 2
-        lane_width = road_width // 3
+        self.road_width = 300
+        self.road_x = (self.width - self.road_width) // 2
+        lane_width = self.road_width // 3
 
         # place car in middle lane
-        car_x = road_x + lane_width + (lane_width - 50) // 2
+        car_x = self.road_x + lane_width + (lane_width - 50) // 2
         car_y = self.height - 120
 
         self.player = PlayerCar(car_x, car_y)
+
+        self.obstacles = []
+        self.spawn_timer = 0
 
     def draw_road(self):
         road_width = 300
         road_x = (self.width - road_width) // 2
 
         # draw road
-        pygame.draw.rect(self.screen, (50, 50, 50), (road_x, 0, road_width, self.height))
+        pygame.draw.rect(self.screen, (50, 50, 50), (self.road_x, 0, road_width, self.height))
 
         # lane settings
         lane_color = (255, 255, 255)
@@ -38,9 +42,9 @@ class Game:
         gap = 20
 
         # 3 lanes means 2 divider lines
-        lane_size = road_width // 3
-        line1_x = road_x + lane_size
-        line2_x = road_x + 2 * lane_size
+        lane_size = self.road_width // 3
+        line1_x = self.road_x + lane_size
+        line2_x = self.road_x + 2 * lane_size
 
         for y in range(0, self.height, dash_height + gap):
             pygame.draw.rect(
