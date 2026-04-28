@@ -33,9 +33,9 @@ class Obstacle:
         self.y += self.speed  # II.B.1
 
     def draw(self, screen):
-        ob1 = pygame.image.load("../image/Obstacle1")
-        ob2 = pygame.image.load("../image/Obstacle2")
-        ob3 = pygame.image.load("../image/Obstacle3")
+        ob1 = pygame.image.load("../image/obstacle1.png")
+        ob2 = pygame.image.load("../image/obstacle2.png")
+        ob3 = pygame.image.load("../image/obstacle3.png")
         screen.blit(ob1, (self.x, self.y))
 
 
