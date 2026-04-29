@@ -5,8 +5,8 @@ class PlayerCar:
     def __init__(self, x, y):
         self.x = x
         self.y = y
-        self.width = 50
-        self.height = 90
+        self.width = 40
+        self.height = 70
         self.speed = 6
 
         # correct path to image

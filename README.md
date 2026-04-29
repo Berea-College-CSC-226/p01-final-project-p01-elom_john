@@ -7,7 +7,7 @@
 
 **Author(s)**: Elom Amuzu and John Lolonga
 
-❗️**Google Doc Link**: https://docs.google.com/document/d/1Q1GhlZha7AW0Bk-vZ2wTr67cs8khxdAAzE6vHVoNrtQ/edit?tab=t.0#heading=h.qg98s23ap4mh
+**Google Doc Link**: https://docs.google.com/document/d/1Q1GhlZha7AW0Bk-vZ2wTr67cs8khxdAAzE6vHVoNrtQ/edit?tab=t.0#heading=h.qg98s23ap4mh
 
 ---
 
@@ -36,8 +36,9 @@ branch) as they work. When you need to bring each others branches together, do s
 into your own, following the process we've discussed in previous assignments, then re-branching out from the merged code.  
 
 ```
-    Branch 1 starting name: _____________
-    Branch 2 starting name: _____________
+    Branch 1 starting name: amuzue_lolongaj
+    Branch 2 starting name: lolongaj
+    Branch 3 starting name: amuzue
 ```
 
 ### References 
@@ -46,6 +47,9 @@ into your own, following the process we've discussed in previous assignments, th
 and describe how you integrated the ideas or code into your program. This includes online sources, people who have 
 helped you, AI tools you've used, and any other resources that are not solely your own contribution. Update this 
 section as you go. DO NOT forget about it!
+
+Sources: 
+1. https://chatgpt.com/share/69f0f499-f9e8-83ea-84d0-c80b0194eb02
 
 ---
 
@@ -102,11 +106,11 @@ deficiencies that remain in your code. Bugs found that aren't acknowledged in th
 - How well did you work with your partner? What made it go well? What made it challenging?
 
 ```
-    Partner 1: **Replace this with your reflection
-```
+    Partner 1: **Replace this with your reflection 
+``` 
 
 ```
-    Partner 2: **Replace this with your reflection
+    Partner 2: **Replace this with your reflection  
 ```
 
 ---

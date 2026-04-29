@@ -1,53 +1,12 @@
 import pygame
-import random
 from playercar import PlayerCar
-
-
-
-class Obstacle:
-    def __init__(self, screen_width):
-        self.width = 50
-        self.height = 80
-        # Random horizontal position
-        road_width = 300
-        road_x = (screen_width - road_width) // 2
-
-        self.x = random.randint(road_x, road_x + road_width - self.width)
-        # Start near top
-        self.y = -self.height
-        #Load Image
-        images = [
-            pygame.image.load("../image/Obstacle1.jpg"),
-            pygame.image.load("../image/Obstacle2.jpg"),
-            pygame.image.load("../image/Obstacle3.jpg")
-        ]
-        self.image = random.choice(images)
-        self.image = pygame.transform.scale(self.image, (50, 80))
-        # Appearance
-        self.speed = 2
-
-    # Move obstacle downward
-    def move(self):
-        self.y += self.speed  # II.B.1
-
-    def draw(self, screen):
-        screen.blit(self.image, (self.x, self.y))
-
-
-
-    # Check if off-screen
-    def is_off_screen(self, screen_height):
-        return self.y > screen_height
-
-
+from obstacles import Obstacle
 
 
 class Game:
     def __init__(self):
         pygame.init()
 
-        self.obstacles = []
-        self.spawn_timer = 0
         self.width = 600
         self.height = 700
         self.screen = pygame.display.set_mode((self.width, self.height))
@@ -65,6 +24,9 @@ class Game:
         car_y = self.height - 120
 
         self.player = PlayerCar(car_x, car_y)
+
+        self.obstacles = []
+        self.spawn_timer = 0
 
     def draw_road(self):
         road_width = 300
@@ -97,18 +59,31 @@ class Game:
             )
 
 
+    def update_obstacles(self):
+        self.spawn_timer += 1
+
+        if self.spawn_timer > 50:
+            self.obstacles.append(Obstacle(self.road_x, self.road_width))
+            self.spawn_timer = 0
+
+        for obstacle in self.obstacles:
+            obstacle.move()
+
+        self.obstacles = [
+            obstacle for obstacle in self.obstacles
+            if not obstacle.is_off_screen(self.height)
+        ]
 
     def draw(self):
-
-        #Draw background
+        # background (grass color)
         self.screen.fill((34, 139, 34))
 
-        #Draw road
+        # draw road
         self.draw_road()
 
-        #Draw obstacles
+        #Draw the obstacles
         for obstacle in self.obstacles:
-                obstacle.draw(self.screen)
+            obstacle.draw(self.screen)
 
         #Draw car
         self.player.draw(self.screen)
@@ -122,18 +97,25 @@ class Game:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     self.running = False
-            self.spawn_timer += 1
-            if self.spawn_timer > 50:
-                self.obstacles.append(Obstacle(self.width))
-                self.spawn_timer = 0
 
-            for obstacle in self.obstacles:
-                obstacle.move()
+            keys = pygame.key.get_pressed()
 
-            self.obstacles = [obs for obs in self.obstacles if not obs.is_off_screen(self.height)]
+            if keys[pygame.K_LEFT]:
+                self.player.move_left()
 
+            if keys[pygame.K_RIGHT]:
+                self.player.move_right()
+
+            if self.player.x < self.road_x:
+                self.player.x = self.road_x
+
+            right_edge = self.road_x + self.road_width - self.player.width
+
+            if self.player.x > right_edge:
+                self.player.x = right_edge
+
+            self.update_obstacles()
             self.draw()
-
 
         pygame.quit()
 
