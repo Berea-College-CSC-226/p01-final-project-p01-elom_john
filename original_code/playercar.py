@@ -4,8 +4,6 @@ import pygame
 class PlayerCar(pygame.sprite.Sprite):
     def __init__(self, x, y):
         super().__init__()
-        self.x = x
-        self.y = y
         self.width = 40
         self.height = 70
         self.speed = 6
@@ -17,6 +15,9 @@ class PlayerCar(pygame.sprite.Sprite):
 
         self.rect = self.image.get_rect()
         self.rect.topleft = (x, y)
+
+    def get_collision_rect(self):
+        return self.rect.inflate(-20, -25)
 
 
     #Car movement

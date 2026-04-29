@@ -62,7 +62,7 @@ class Game:
     def update_obstacles(self):
         self.spawn_timer += 1
 
-        if self.spawn_timer > 50:
+        if self.spawn_timer > 80:
             self.obstacles.append(Obstacle(self.road_x, self.road_width))
             self.spawn_timer = 0
 
@@ -106,16 +106,27 @@ class Game:
             if keys[pygame.K_RIGHT]:
                 self.player.move_right()
 
-            if self.player.x < self.road_x:
-                self.player.x = self.road_x
+            if self.player.rect.left < self.road_x:
+                self.player.rect.left = self.road_x
 
-            right_edge = self.road_x + self.road_width - self.player.width
+            right_edge = self.road_x + self.road_width
 
-            if self.player.x > right_edge:
-                self.player.x = right_edge
+            if self.player.rect.right > right_edge:
+                self.player.rect.right = right_edge
 
-            if pygame.sprite.spritecollide(self.player, self.obstacles,False):
-                print ("collided")
+
+            if pygame.sprite.spritecollide(self.player, self.obstacles, False):
+                font = pygame.font.SysFont("ComicSans", 36)
+                txt = font.render("Game Over!", True, "red")
+                self.screen.blit(
+                    txt,
+                    (self.width // 2 - 100, self.height // 2)
+                    )
+
+                pygame.display.update()
+                pygame.time.delay(7000)
+
+                self.running = False
 
             self.update_obstacles()
             self.draw()
