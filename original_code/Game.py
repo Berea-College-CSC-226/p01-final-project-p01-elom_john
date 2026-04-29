@@ -15,12 +15,12 @@ class Game:
         self.clock = pygame.time.Clock()
         self.running = True
 
-        road_width = 300
-        road_x = (self.width - road_width) // 2
-        lane_width = road_width // 3
+        self.road_width = 300
+        self.road_x = (self.width - self.road_width) // 2
+        lane_width = self.road_width // 3
 
         # place car in middle lane
-        car_x = road_x + lane_width + (lane_width - 50) // 2
+        car_x = self.road_x + lane_width + (lane_width - 50) // 2
         car_y = self.height - 120
 
         self.player = PlayerCar(car_x, car_y)
@@ -113,6 +113,9 @@ class Game:
 
             if self.player.x > right_edge:
                 self.player.x = right_edge
+
+            if pygame.sprite.spritecollide(self.player, self.obstacles,False):
+                print ("collided")
 
             self.update_obstacles()
             self.draw()
