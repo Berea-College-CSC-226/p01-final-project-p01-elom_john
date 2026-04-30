@@ -28,6 +28,9 @@ class Game:
         self.obstacles = []
         self.spawn_timer = 0
 
+        self.score = 0
+        self.font = pygame.font.SysFont("ComicSans", 30)
+
     def draw_road(self):
         road_width = 300
         road_x = (self.width - road_width) // 2
@@ -90,6 +93,10 @@ class Game:
 
         pygame.display.update()
 
+    # Record the score and update
+    def update_score(self):
+        self.score += 1
+
     def run(self):
         while self.running:
             self.clock.tick(60)
@@ -114,19 +121,17 @@ class Game:
             if self.player.rect.right > right_edge:
                 self.player.rect.right = right_edge
 
+            for obstacle in self.obstacles:
+                if self.player.get_collision_rect().colliderect(obstacle.get_collision_rect()):
+                    font = pygame.font.SysFont("ComicSans", 36)
+                    txt = font.render("Game Over!", True, "red")
+                    text_rect = txt.get_rect(center=(self.width // 2, self.height // 2))
 
-            if pygame.sprite.spritecollide(self.player, self.obstacles, False):
-                font = pygame.font.SysFont("ComicSans", 36)
-                txt = font.render("Game Over!", True, "red")
-                self.screen.blit(
-                    txt,
-                    (self.width // 2 - 100, self.height // 2)
-                    )
+                    self.screen.blit(txt, text_rect)
+                    pygame.display.update()
+                    pygame.time.delay(7000)
 
-                pygame.display.update()
-                pygame.time.delay(7000)
-
-                self.running = False
+                    self.running = False
 
             self.update_obstacles()
             self.draw()

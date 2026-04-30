@@ -28,6 +28,8 @@ class Obstacle:
         self.rect = self.image.get_rect()
         self.rect.topleft = (x, y)
 
+        # self.rect.inflate(-20, -25)
+
     def get_collision_rect(self):
         return self.rect.inflate(-20, -25)
 
