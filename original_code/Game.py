@@ -29,7 +29,7 @@ class Game:
         self.spawn_timer = 0
 
         self.score = 0
-        self.font = pygame.font.SysFont("ComicSans", 30)
+        self.font = pygame.font.SysFont("ComicSans", 20)
 
     def draw_road(self):
         road_width = 300
@@ -84,6 +84,8 @@ class Game:
         # draw road
         self.draw_road()
 
+        self.draw_score()
+
         #Draw the obstacles
         for obstacle in self.obstacles:
             obstacle.draw(self.screen)
@@ -96,6 +98,10 @@ class Game:
     # Record the score and update
     def update_score(self):
         self.score += 1
+
+    def draw_score(self):
+        score_text = self.font.render("Score: " + str(self.score), True, "white")
+        self.screen.blit(score_text, (20, 20))
 
     def run(self):
         while self.running:
@@ -134,7 +140,9 @@ class Game:
                     self.running = False
 
             self.update_obstacles()
+            self.update_score()
             self.draw()
+
 
         pygame.quit()
 
