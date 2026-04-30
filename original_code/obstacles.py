@@ -13,22 +13,32 @@ class Obstacle:
 
         lane_width = road_width // 3
         lane_number = random.randint(0, 2)
+        self.rect = pygame.Rect(road_x, lane_width * lane_number, self.width, self.height)
+        #self.rect = self.image.get_rect()
+        #self.rect.move_ip(self.x, self.y)
 
         # center the obstacle inside one of the 3 lanes
-        self.x = road_x + lane_number * lane_width + (lane_width - self.width) // 2
-        self.y = -self.height
+        x = road_x + lane_number * lane_width + (lane_width - self.width) // 2
+        y = -self.height
 
 
         self.image = pygame.image.load("../image/obstacle001.png")
         self.image = pygame.transform.scale(self.image, (self.width, self.height))
 
+        self.rect = self.image.get_rect()
+        self.rect.topleft = (x, y)
+
+        # self.rect.inflate(-20, -25)
+
+    def get_collision_rect(self):
+        return self.rect.inflate(-20, -25)
 
     def move(self):
-        self.y += self.speed
+        self.rect.move_ip(0, self.speed)
 
     def draw(self, screen):
-        screen.blit(self.image, (self.x, self.y))
+        screen.blit(self.image, self.rect)
 
     # Check if off screen
     def is_off_screen(self, screen_height):
-        return self.y > screen_height
+        return self.rect.top > screen_height
