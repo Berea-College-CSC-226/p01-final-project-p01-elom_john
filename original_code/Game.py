@@ -7,6 +7,11 @@ class Game:
     def __init__(self):
         pygame.init()
 
+        self.spawn_timer = 0
+        self.spawn_delay = 80
+        self.difficulty_timer = 0
+        self.obstacle_speed = 3
+
         self.width = 600
         self.height = 700
         self.screen = pygame.display.set_mode((self.width, self.height))
@@ -26,14 +31,16 @@ class Game:
         self.player = PlayerCar(car_x, car_y)
 
         self.obstacles = []
-        self.spawn_timer = 0
+
+        self.obstacle_speed = 3
+        self.difficulty_timer = 0
 
         self.score = 0
         self.font = pygame.font.SysFont("ComicSans", 20)
 
     def draw_road(self):
-        road_width = 300
-        road_x = (self.width - road_width) // 2
+        road_width = self.road_width
+        road_x = self.road_x
 
         # draw road
         pygame.draw.rect(self.screen, (50, 50, 50), (road_x, 0, road_width, self.height))
@@ -61,21 +68,35 @@ class Game:
                 (line2_x - lane_width // 2, y, lane_width, dash_height)
             )
 
-
     def update_obstacles(self):
         self.spawn_timer += 1
+        self.difficulty_timer += 1
 
-        if self.spawn_timer > 80:
-            self.obstacles.append(Obstacle(self.road_x, self.road_width))
+        # Increase difficulty over time
+        if self.difficulty_timer > 300:
+            self.obstacle_speed += 1
+            self.difficulty_timer = 0
+
+            if self.spawn_delay > 20:
+                self.spawn_delay -= 5  # spawn faster over time
+
+        # Spawn obstacles
+        if self.spawn_timer > self.spawn_delay:
+            new_obstacle = Obstacle(self.road_x, self.road_width)
+            new_obstacle.speed = self.obstacle_speed
+            self.obstacles.append(new_obstacle)
             self.spawn_timer = 0
 
+        # Move obstacles
         for obstacle in self.obstacles:
             obstacle.move()
 
+        # Remove off-screen
         self.obstacles = [
-            obstacle for obstacle in self.obstacles
-            if not obstacle.is_off_screen(self.height)
+            obs for obs in self.obstacles
+            if not obs.is_off_screen(self.height)
         ]
+
 
     def draw(self):
         # background (grass color)
@@ -135,7 +156,7 @@ class Game:
 
                     self.screen.blit(txt, text_rect)
                     pygame.display.update()
-                    pygame.time.delay(7000)
+                    pygame.time.delay(10000)
 
                     self.running = False
 

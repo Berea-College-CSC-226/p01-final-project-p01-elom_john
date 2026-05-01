@@ -31,7 +31,7 @@ class Obstacle:
         # self.rect.inflate(-20, -25)
 
     def get_collision_rect(self):
-        return self.rect.inflate(-20, -25)
+        return self.rect.inflate(-30, -35)
 
     def move(self):
         self.rect.move_ip(0, self.speed)
