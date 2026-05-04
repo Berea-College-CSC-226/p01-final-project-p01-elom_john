@@ -14,8 +14,7 @@ class Obstacle:
         lane_width = road_width // 3
         lane_number = random.randint(0, 2)
         self.rect = pygame.Rect(road_x, lane_width * lane_number, self.width, self.height)
-        #self.rect = self.image.get_rect()
-        #self.rect.move_ip(self.x, self.y)
+
 
         # center the obstacle inside one of the 3 lanes
         x = road_x + lane_number * lane_width + (lane_width - self.width) // 2
@@ -27,8 +26,6 @@ class Obstacle:
 
         self.rect = self.image.get_rect()
         self.rect.topleft = (x, y)
-
-        # self.rect.inflate(-20, -25)
 
     def get_collision_rect(self):
         return self.rect.inflate(-30, -35)
