@@ -17,8 +17,7 @@
 
 **Purpose**: `This project creates a 2D Pygame car-dodging game where the player moves left and right to avoid falling obstacle cars while the speed increases over time.`
 
-️**Source Assignment(s)**: `Using inspiration from the T11-The Legend of Tuna: Breath of Catnip, and games we played as 
-children`
+️**Source Assignment(s)**: `based on the T11-The Legend of Tuna: Breath of Catnip`
 
 **CRC Card(s)**:
   - Create a CRC card for each class that your project will implement.
@@ -28,9 +27,9 @@ children`
     README. You can do this by saving an image in the repository and linking to it. See the sample CRC card below - 
     and REPLACE it with your own:
   
-([image/game_crc.png](image/game_crc.png) "Image of gameplay. Upload your own gameplay image here.")
-([image/Obstacles_crc.png](image/game_crc.png) "Image of obstacles CRC card. Upload your own CRC card here.")
-([image/PlayerCar_crc.png](image/game_crc.png) "Image of player CRC card. Upload your own CRC card here.")
+![Don't leave me in your README!](image/game_crc.png "Image of gameplay. Upload your own gameplay image here.")
+![Don't leave me in your README!](image/Obstacles_crc.png "Image of obstacles CRC card. Upload your own CRC card here.")
+![Don't leave me in your README!](image/PlayerCar_crc.png "Image of player CRC card. Upload your own CRC card here.")
 
 **Branches**: This project will **require** effective use of git. 
 
@@ -66,37 +65,55 @@ could use from pygame
 
 Most importantly, keep your issue queue up to date, and focus on your code. 🙃
 
-Reflect on what you’ve done so far. How’s it going? Are you feeling behind/ahead? What are you worried about? 
+❗Reflect on what you’ve done so far. How’s it going? Are you feeling behind/ahead? What are you worried about? 
 What has surprised you so far? Describe your general feelings. Be honest with yourself; this section is for you, not me.
 
 ```
-    **Elom - 
+    So far, the project is going well. We have been able to set up the game window, create the road with three lanes, 
+    and implement the player car with left and right movement. We also added falling obstacle cars and started working 
+    on collision detection and scoring. Using classes like Game, PlayerCar, and Obstacle has helped keep the project 
+    organized and easier to manage.
+
+    I feel like we are making steady progress, but I would not say we are completely ahead. There are still parts that 
+    need improvement, especially making the collision detection feel accurate and to have the rect align with the image, 
+    and balancing the game difficulty so it is challenging but not impossible. I am also thinking about adding features
+    like sound, but I want to make sure the core game works correctly first.
 ```
 
 ---
 
 ## Milestone 3: Virtual Check-In
 
-❗Indicate what percentage of the project you have left to complete and how confident you feel. 
+Indicate what percentage of the project you have left to complete and how confident you feel. 
 
-❗️**Completion Percentage**: `0 - 100%`
+**Completion Percentage**: `90%`
 
 ❗️**Confidence**: Describe how confident you feel about completing this project, and why. Then, describe some 
   strategies you can employ to increase the likelihood that you'll be successful in completing this project 
   before the deadline.
 
 ```
-    **Replace this with your reflection
+    I feel confident about completing this project. We already have the main parts working, like the player car, 
+    obstacles, movement, and basic collision. The structure with classes is set up, so it’s easier to keep building.
+    To stay on track, we will keep working step by step, test each feature as we add it, and update our issue queue 
+    regularly. We will also focus on required features first before adding extras features.
 ```
 
 ---
 
 ## Milestone 4: Final Code, Presentation, Demo
 
-### ❗User Instructions
+### User Instructions
 
-❗In a paragraph, explain how to use your program. Assume the user is starting just after they hit the "Run" button 
+In a paragraph, explain how to use your program. Assume the user is starting just after they hit the "Run" button 
 in PyCharm. 
+```
+    When you run the program, a game window will open with a road and a player car at the bottom center. 
+    Use the left and right arrow keys to move the car left and right to avoid falling obstacle cars. 
+    The game will get faster over time, so try to survive as long as possible. Your score will increase based on how long you survive. 
+    If you collide with an obstacle car, the game will end and your final score will be displayed.
+
+```
 
 ### ❗Errors and Constraints
 
@@ -115,7 +132,7 @@ deficiencies that remain in your code. Bugs found that aren't acknowledged in th
 - How well did you work with your partner? What made it go well? What made it challenging?
 
 ```
-    Partner 1: **Replace this with your reflection 
+    Partner 1(John):  
 ``` 
 
 ```
