@@ -132,7 +132,23 @@ deficiencies that remain in your code. Bugs found that aren't acknowledged in th
 - How well did you work with your partner? What made it go well? What made it challenging?
 
 ```
-    Partner 1(John):  
+    Partner 1(John): 
+    
+    I selected this project because I wanted to create a fun and engaging game that also allowed me to 
+    practice my programming skills. I have always enjoyed car games, so making a car-dodging game seemed like a great idea. 
+    My final project closely reflected our initial design, as we were able to implement the core design, such as the 
+    player car, obstacles, and increasing difficulty. However we did have to make some adjustments along the way, such 
+    as tweaking the collision detection and balancing the game difficulty. 
+    
+    From this process, I learned a lot about game development, working with Pygame, and how to structure a project using 
+    classes. Also learned how to collaborate effectively with a partner, especially when it comes to merging code and 
+    managing branches. The hardest part of the final project was definitely getting the collision detection to feel 
+    accurate and to have the rect align with the image, as it required a lot of trial and error to get it right. What I 
+    would do differently next time is to start working on the collision detection earlier in the process, as it ended up 
+    taking more time than I expected. Overall, I think we worked well together. We communicated regularly, divided tasks 
+    based on our strengths, and were able to merge our code effectively. The main challenge was making sure we were on 
+    the same page with the design and implementation, but we were able to overcome that through regular check-ins and 
+    updates to our issue queue.
 ``` 
 
 ```
