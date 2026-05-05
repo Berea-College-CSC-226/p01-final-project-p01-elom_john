@@ -17,7 +17,8 @@
 
 **Purpose**: `This project creates a 2D Pygame car-dodging game where the player moves left and right to avoid falling obstacle cars while the speed increases over time.`
 
-️**Source Assignment(s)**: `based on the T11-The Legend of Tuna: Breath of Catnip`
+️**Source Assignment(s)**: `Using inspiration from the T11-The Legend of Tuna: Breath of Catnip, and games we played as 
+children`
 
 **CRC Card(s)**:
   - Create a CRC card for each class that your project will implement.
@@ -27,9 +28,9 @@
     README. You can do this by saving an image in the repository and linking to it. See the sample CRC card below - 
     and REPLACE it with your own:
   
-![Don't leave me in your README!](image/game_crc.png "Image of gameplay. Upload your own gameplay image here.")
-![Don't leave me in your README!](image/Obstacles_crc.png "Image of obstacles CRC card. Upload your own CRC card here.")
-![Don't leave me in your README!](image/PlayerCar_crc.png "Image of player CRC card. Upload your own CRC card here.")
+([image/game_crc.png](image/game_crc.png) "Image of gameplay. Upload your own gameplay image here.")
+([image/Obstacles_crc.png](image/game_crc.png) "Image of obstacles CRC card. Upload your own CRC card here.")
+([image/PlayerCar_crc.png](image/game_crc.png) "Image of player CRC card. Upload your own CRC card here.")
 
 **Branches**: This project will **require** effective use of git. 
 
@@ -46,13 +47,18 @@ into your own, following the process we've discussed in previous assignments, th
 
 ### References 
 
-❗Throughout this project, you will likely use outside resources. Reference all ideas which are not your own, 
+Throughout this project, you will likely use outside resources. Reference all ideas which are not your own, 
 and describe how you integrated the ideas or code into your program. This includes online sources, people who have 
 helped you, AI tools you've used, and any other resources that are not solely your own contribution. Update this 
 section as you go. DO NOT forget about it!
 
 Sources: 
 1. https://chatgpt.com/share/69f0f499-f9e8-83ea-84d0-c80b0194eb02
+2. T11-The Legend of Tuna: Breath of Catnip - We used the collision code from this team work, modified it and included 
+in our code   
+3. Bright and Bennie's project - We watched their and tested their game, and from that we improved on our project
+4. Google Search - Used it to search up images and ideas for our project, also using it to discover new modules we 
+could use from pygame
 
 ---
 
@@ -60,11 +66,11 @@ Sources:
 
 Most importantly, keep your issue queue up to date, and focus on your code. 🙃
 
-❗Reflect on what you’ve done so far. How’s it going? Are you feeling behind/ahead? What are you worried about? 
+Reflect on what you’ve done so far. How’s it going? Are you feeling behind/ahead? What are you worried about? 
 What has surprised you so far? Describe your general feelings. Be honest with yourself; this section is for you, not me.
 
 ```
-    **Replace this text with your reflection
+    **Elom - 
 ```
 
 ---
