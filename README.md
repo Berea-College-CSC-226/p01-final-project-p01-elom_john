@@ -2,8 +2,6 @@
 
 ## Instructions
 
-❗️Exclamation Marks ❗️indicate action items; you should remove these emoji as you complete/update the items which 
-  they accompany. (This means that your final README should have no ❗️in it!)
 
 **Author(s)**: Elom Amuzu and John Lolonga
 
@@ -27,9 +25,9 @@
     README. You can do this by saving an image in the repository and linking to it. See the sample CRC card below - 
     and REPLACE it with your own:
   
-![Don't leave me in your README!](image/game_crc.png "Image of gameplay. Upload your own gameplay image here.")
-![Don't leave me in your README!](image/Obstacles_crc.png "Image of obstacles CRC card. Upload your own CRC card here.")
-![Don't leave me in your README!](image/PlayerCar_crc.png "Image of player CRC card. Upload your own CRC card here.")
+[Don't leave me in your README!](image/game_crc.png "Image of gameplay. Upload your own gameplay image here.")
+[Don't leave me in your README!](image/Obstacles_crc.png "Image of obstacles CRC card. Upload your own CRC card here.")
+[Don't leave me in your README!](image/PlayerCar_crc.png "Image of player CRC card. Upload your own CRC card here.")
 
 **Branches**: This project will **require** effective use of git. 
 
@@ -65,7 +63,7 @@ could use from pygame
 
 Most importantly, keep your issue queue up to date, and focus on your code. 🙃
 
-❗Reflect on what you’ve done so far. How’s it going? Are you feeling behind/ahead? What are you worried about? 
+Reflect on what you’ve done so far. How’s it going? Are you feeling behind/ahead? What are you worried about? 
 What has surprised you so far? Describe your general feelings. Be honest with yourself; this section is for you, not me.
 
 ```
@@ -88,7 +86,7 @@ Indicate what percentage of the project you have left to complete and how confid
 
 **Completion Percentage**: `90%`
 
-❗️**Confidence**: Describe how confident you feel about completing this project, and why. Then, describe some 
+**Confidence**: Describe how confident you feel about completing this project, and why. Then, describe some 
   strategies you can employ to increase the likelihood that you'll be successful in completing this project 
   before the deadline.
 
@@ -115,15 +113,15 @@ in PyCharm.
 
 ```
 
-### ❗Errors and Constraints
+### Errors and Constraints
 
-❗Every program has bugs or features that had to be scrapped for time. These bugs should be tracked in the issue queue. 
+Every program has bugs or features that had to be scrapped for time. These bugs should be tracked in the issue queue. 
 You should already have a few items in here from the prior weeks. Create a new issue for any undocumented errors and 
 deficiencies that remain in your code. Bugs found that aren't acknowledged in the queue will be penalized.
 
-### ❗Reflection
+### Reflection
 
-❗Each partner should write three to four well-written paragraphs address the following (at a minimum):
+Each partner should write three to four well-written paragraphs address the following (at a minimum):
 - Why did you select the project that you did?
 - How closely did your final project reflect your initial design?
 - What did you learn from this process?
@@ -152,7 +150,36 @@ deficiencies that remain in your code. Bugs found that aren't acknowledged in th
 ``` 
 
 ```
-    Partner 2: **Replace this with your reflection  
+    Partner 2 (Elom): 
+    
+    I chose this project because of many factors, one it fit our learning goals, I saw many ways in which I could 
+    implement the skills I have learned through-out this class, it was a game I myself enjoyed playing as a kid so I was 
+    curious as to whether I could replicate it, it was an interactive program that would allow for anyone that was t
+    testing it to be emersed, and finally my partner and I were able to agree on this project allowing both of us to be 
+    enthusiatic about completing it. All these reasons sum up the fact that this project fit me as a person, and allowed
+    me to work on something I and others would enjoy. And because of that I put a lot of effort into making sure our 
+    final project reflected my initial design, which is the memories I have aout this game when I was a child, and we
+    were able to make sure that came true.
+    
+    I learned a lot from this process, but some of the things that I will truly take to heart and reflect on would be 
+    planning/layout of the program, communication between teammates, and patience. There are other things like 
+    practicing my coding skills using classes and my use of libraries and their modules, but the three previously 
+    mentioned were kind of a suprise to me because I didn't initially think they would be that important and I eneded up 
+    being completely wrong. What I have come to learn is that to a certain degree, even with good coding skills and use 
+    of libraries, without those three you would not be able to go far in coding. The hardest part of the final project 
+    to me was the initial figuring out of what we needed to do, where we needed to do it how it needed to be done and 
+    occasionally figuring out how to code something into the program, apart from that finding the bugs in the program 
+    after you have already spent hours looking at it and still not knowing what is wrong was the other difficult part.
+    
+    Knowing what I know now next time I would spend a longer amount of time planning and mapping out what I needed to 
+    do, where I needed to do it and who needed to do what; at the same time I would spend more time trying to 
+    communicate with my partner, taking every chance we have to work on the project together physically, apart from 
+    these I would ask for help more often, maybe not always because I don't know but because I want to hear someone 
+    else's opinions. Finally, overall I would say my partner and I were able to work well together, we completed our
+    tasks correctly, dividing the work to make it easier, and this was especially the case when we were in person, 
+    though we did have different views on ways to implement programs and what designs to use we were able to work 
+    through that.  
+ 
 ```
 
 ---
