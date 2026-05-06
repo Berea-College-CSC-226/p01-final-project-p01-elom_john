@@ -6,7 +6,7 @@ import random
 
 class Obstacle:
     def __init__(self, road_x, road_width):
-        self.width = 85
+        self.width = 90
         self.height = 100
         self.speed = 3
         # self.x = random.randint(road_x, road_x + road_width - self.width)
@@ -28,7 +28,7 @@ class Obstacle:
         self.rect.topleft = (x, y)
 
     def get_collision_rect(self):
-        return self.rect.inflate(-30, -35)
+        return self.rect.inflate(-40, -30)
 
     def move(self):
         self.rect.move_ip(0, self.speed)

@@ -156,7 +156,7 @@ class Game:
 
                     self.screen.blit(txt, text_rect)
                     pygame.display.update()
-                    pygame.time.delay(10000)
+                    pygame.time.delay(5000)
 
                     self.running = False
 
